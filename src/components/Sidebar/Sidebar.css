@@ -1,0 +1,125 @@
+.sidebar {
+  min-height: 100vh;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 25px 15px;
+  background-color: #f0f4f9;
+  transition: width 0.5s ease;
+  position: relative;
+}
+
+.sidebar img {
+  width: 20px;
+}
+
+.sidebar .menu {
+  display: block;
+  margin-left: 10px;
+  cursor: pointer;
+  height: 20px;
+}
+
+.sidebar .menu:hover {
+  opacity: 0.6;
+}
+
+.sidebar .new-chat {
+  margin-top: 30px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 15px;
+  background-color: #e6eaf1;
+  border-radius: 50px;
+  font-size: 14px;
+  color: grey;
+  cursor: pointer;
+  transition: width 0.5s ease;
+  overflow: hidden;
+  position: relative;
+  max-height: fit-content;
+}
+
+.sidebar:not(:has(.new-chat p)) {
+  width: 80px;
+  text-align: center;
+}
+
+.sidebar .new-chat img {
+  width: 20px;
+  height: 27px;
+}
+
+.sidebar .new-chat p {
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.sidebar .new-chat:hover {
+  background-color: #d0d7e3;
+  width: fit-content;
+}
+
+.sidebar .recent {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sidebar .recent-title {
+  margin-top: 30px;
+  margin-bottom: -5px;
+  padding-left: 10px;
+  font-size: 17px;
+  font-weight: 535;
+}
+
+.sidebar .recent-entry {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  padding-right: 30px;
+  border-radius: 50px;
+  color: #282828;
+  cursor: pointer;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.sidebar .recent-entry p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.4;
+  font-weight: 350;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex: 1;
+}
+
+.sidebar .recent-entry:hover {
+  background-color: #e2e6ea;
+}
+
+.sidebar .bottom {
+  display: flex;
+  flex-direction: column;
+  width: 100px;
+}
+
+.sidebar .Bottom-item {
+  padding-right: 10px;
+  display: flex;
+  align-items: center;
+}
+@media (max-width:600px){
+  .sidebar{
+    display: none;
+  }
+}
