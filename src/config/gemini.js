@@ -1,28 +1,18 @@
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
 const API_KEY = import.meta.env.VITE_GEMINI_API_KEY;
-
-if (!API_KEY) {
-  console.error("❌ Gemini API key missing");
-}
-
 const genAI = new GoogleGenerativeAI(API_KEY);
 
-// Use a valid model from the API, e.g., "gemini-1.5"
-const model = genAI.getGenerativeModel({
-  model: "gemini-1.5", // <-- remove "-flash"
-});
-
-async function runChat(prompt) {
+async function listModels() {
   try {
-    const result = await model.generateContent(prompt);
-    return result.response.text();
+    const models = await genAI.listModels();
+    console.log("Available models:", models);
   } catch (error) {
-    console.error("Gemini Error:", error);
-    return "Error getting response from Gemini";
+    console.error("Error listing models:", error);
   }
 }
 
-export default runChat;
+listModels();
+
 
 
