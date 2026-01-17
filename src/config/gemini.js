@@ -8,8 +8,9 @@ if (!API_KEY) {
 
 const genAI = new GoogleGenerativeAI(API_KEY);
 
+// Use a valid model from the API, e.g., "gemini-1.5"
 const model = genAI.getGenerativeModel({
-  model: "gemini-1.5-flash",
+  model: "gemini-1.5", // <-- remove "-flash"
 });
 
 async function runChat(prompt) {
@@ -23,4 +24,5 @@ async function runChat(prompt) {
 }
 
 export default runChat;
+
 
