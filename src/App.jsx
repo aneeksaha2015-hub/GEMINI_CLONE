@@ -1,7 +1,7 @@
 import React from 'react';
 import './index.css';
-import Sidebar from './components/sidebar/sidebar';
-import Main from './components/main/main';
+import Sidebar from './components/Sidebar/Sidebar';
+import Main from './components/Main/Main';
 
 const App = () => {
   return (
