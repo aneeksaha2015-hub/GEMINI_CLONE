@@ -19,6 +19,6 @@ React (Frontend library)
 
 JavaScript (ES6+)
 
-CSS / Tailwind (if you used it)
+CSS / Tailwind 
 
 REST API integration 
